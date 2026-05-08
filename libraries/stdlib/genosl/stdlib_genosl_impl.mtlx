@@ -493,7 +493,7 @@
   <implementation name="IM_crossproduct_vector3_genosl" nodedef="ND_crossproduct_vector3" target="genosl" sourcecode="cross({{in1}}, {{in2}})" />
 
   <!-- <transformpoint> -->
-  <implementation name="IM_transformpoint_vector3_genosl" nodedef="ND_transformpoint_vector3" target="genosl" sourcecode="transform({{fromspace}}, {{tospace}}, point({{in}}))" />
+  <implementation name="IM_transformpoint_vector3_genosl" nodedef="ND_transformpoint_vector3" target="genosl" sourcecode="transform(matrix({{fromspace}}, {{tospace}}), point({{in}}))" />
 
   <!-- <transformvector> -->
   <implementation name="IM_transformvector_vector3_genosl" nodedef="ND_transformvector_vector3" target="genosl" sourcecode="transform({{fromspace}}, {{tospace}}, {{in}})" />
