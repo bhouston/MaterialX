@@ -46,7 +46,7 @@ class TangentOsl : public mx::ShaderNodeImpl
         {
             shadergen.emitLineBegin(stage);
             shadergen.emitOutput(node.getOutput(), true, false, context, stage);
-            shadergen.emitString(" = normalize(dPdu)", stage);
+            shadergen.emitString(" = normalize(dPdu - N * dot(N, dPdu))", stage);
             shadergen.emitLineEnd(stage);
         }
     }
@@ -68,7 +68,7 @@ class BitangentOsl : public mx::ShaderNodeImpl
         {
             shadergen.emitLineBegin(stage);
             shadergen.emitOutput(node.getOutput(), true, false, context, stage);
-            shadergen.emitString(" = normalize(cross(N, normalize(dPdu)))", stage);
+            shadergen.emitString(" = normalize(dPdv - N * dot(N, dPdv))", stage);
             shadergen.emitLineEnd(stage);
         }
     }
