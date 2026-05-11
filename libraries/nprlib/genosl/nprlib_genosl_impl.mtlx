@@ -12,6 +12,6 @@
   <!-- ======================================================================== -->
 
   <!-- <viewdirection> -->
-  <implementation name="IM_viewdirection_vector3_genosl" nodedef="ND_viewdirection_vector3" sourcecode="transform({{space}}, I)" target="genosl" />
+  <implementation name="IM_viewdirection_vector3_genosl" nodedef="ND_viewdirection_vector3" sourcecode="normalize(({{space}} == &quot;world&quot;) ? transform({{space}}, I) : transform({{space}}, normal(I)))" target="genosl" />
 
 </materialx>
